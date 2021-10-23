@@ -570,6 +570,8 @@ a:hover {
 
 .photography-wrapper {
   margin: 0 3vw 5vh 3vw;
+  text-align: center;
+  display: block;
 }
 
 /* ----- footer */
