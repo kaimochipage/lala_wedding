@@ -120,6 +120,16 @@ a:hover {
   display: none;
 }
 
+/* フェードイン */
+.fade-block {
+  opacity: .1;
+  transition: all 1.5s;
+}
+
+.fade-block.blockIn {
+  opacity: 1;
+}
+
 /* ----- fv */
 
 .firstview {
@@ -145,11 +155,19 @@ a:hover {
 .catch-copy {
   font-size: 3.6rem;
   text-shadow: 1px 1px 10px #fafafa;
+  filter: blur(100px);
+  animation: blur-anime 2s ease-in-out forwards;
+}
+
+@keyframes blur-anime {
+  100% {  filter: blur(0); }
 }
 
 .fv-title {
   font-size: 3rem;
   text-shadow: 1px 1px 10px #fafafa;
+  filter: blur(100px);
+  animation: blur-anime 4s ease-in-out forwards;
 }
 
 .scroll {
@@ -163,6 +181,8 @@ a:hover {
   color: #707070;
   font-size: 2.6rem;
   writing-mode: vertical-lr;
+  filter: blur(100px);
+  animation: blur-anime 6s ease-in-out forwards;
 }
 
 .scroll::after {
@@ -429,6 +449,7 @@ a:hover {
   /* ----- fv */
   .firstview {
     margin-bottom: 14vh;
+    background-color: none;
   }
 
   .fv-wrapper {
